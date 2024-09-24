@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon" />
+    <!-- tailwindcss cdn  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- lord-icon -->
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <!-- toastify-js  -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <!-- Audio convert  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ffmpeg.js/0.11.1/ffmpeg.min.js"></script>
+
+    <!-- JS scripts -->
+    <script src="script.js"></script>
+    <title>CaptureCast - Developed by Istiak Rahman</title>
+  </head>
+  <body class="bg-gray-200">
+    <div
+      class="flex flex-col justify-center items-center bg-custom-color min-h-screen"
+    >
+      <div
+        class="p-4 bg-white rounded-lg shadow-lg w-full sm:w-[50%] md:w-[50%]"
+      >
+        <!-- Title  -->
+        <h1 class="text-xl font-bold text-center">CaptureCast</h1>
+      </div>
+      <p class="text-center text-sm text-white mt-4 mx-2">
+        CaptureCast: Record your screen with ease and clarity.
+      </p>
+      <div
+        class="control flex flex-col justify-center items-center p-4 mt-3 bg-transparent rounded-lg shadow-lg w-full sm:w-[50%] md:w-[50%]"
+      >
+        <div class="video-container w-full">
+          <video id="video" class="w-full h-auto hidden" autoplay></video>
+        </div>
+        <!-- Icons container -->
+        <div class="flex justify-around w-full mt-4">
+          <!-- Stop icon -->
+          <div id="stop" class="relative hidden cursor-pointer">
+            <lord-icon
+              src="https://cdn.lordicon.com/jctchmfs.json"
+              trigger="hover"
+              style="width: 80px; height: 80px"
+              class="h-20 w-20"
+              title="Stop"
+            ></lord-icon>
+            <span
+              class="absolute top-0 left-0 right-0 text-center text-xs text-white"
+              >Stop</span
+            >
+          </div>
+
+          <!-- Play icon -->
+          <div id="play" class="relative cursor-pointer">
+            <lord-icon
+              id="play"
+              src="https://cdn.lordicon.com/becebamh.json"
+              trigger="hover"
+              style="width: 80px; height: 80px"
+              class="h-20 w-20"
+              title="Play"
+            ></lord-icon>
+            <span
+              class="absolute top-0 left-0 right-0 text-center text-xs text-white"
+              >Play</span
+            >
+          </div>
+
+          <!-- Pause icon -->
+          <!-- <div id="pause" class="relative cursor-pointer hidden">
+            <lord-icon
+              src="https://cdn.lordicon.com/pithnlch.json"
+              trigger="hover"
+              style="width: 80px; height: 80px"
+              class="h-20 w-20"
+              title="Pause"
+            ></lord-icon>
+            <span
+              class="absolute top-0 left-0 right-0 text-center text-xs text-white"
+              >Pause</span
+            >
+          </div> -->
+
+          <!-- Audio Switch -->
+          <div
+            class="audio-switch w-20 h-20 relative cursor-pointer"
+            title="Audio"
+            id="audio"
+          >
+            <img
+              id="switchIcon"
+              src="/assets/switchOn.png"
+              alt="Audio Switch"
+            />
+            <span
+              class="absolute top-0 left-0 right-0 text-center text-xs text-white"
+              >Audio</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="custom-shape-divider-bottom-1719677328">
+      <svg
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+        class="block w-full"
+      >
+        <path
+          d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+          class="shape-fill"
+        ></path>
+      </svg>
+    </div>
+  </body>
+</html>
